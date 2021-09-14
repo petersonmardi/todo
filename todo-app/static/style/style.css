@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: #f0f0f0;
+  color: #bf881e;
+}
+
+body {
+  background-color: #e6e6e6ef;
+}
+
+header {
+  height: 6vh;
+  background-color: rgba(0, 128, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3.5px solid white;
+}
+
+nav p {
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+nav p, .date, .btn-task, input[type=text], .task .para-time, .menu a, .footer p {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-task {
+  width: 245px;
+  background-color: rgba(0, 128, 255, 0.7);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f0f0f0;
+  cursor: pointer;
+}
+
+.btn-task .plus {
+  color: white;
+  margin-right: 15px;
+}
+.btn-task .add-task {
+  color: white;
+  z-index: 5;
+}
+
+.container {
+  margin-left: 45px;
+}
+
+.message {
+  color: #bf881e;
+  margin: 15px;
+  padding: 15px;
+}
+
+.form, .form-edit {
+  margin-top: 25px;
+}
+
+.form form input[type=text], .form-edit form input[type=text] {
+  padding: 15px;
+  margin-right: 15px;
+  color: rgba(0, 128, 255, 0.7);
+  border: 1.5px solid rgba(0, 128, 255, 0.7);
+  border-radius: 6px;
+}
+
+.form form input[type=submit], .form-edit form input[type=submit], .form button, .form-edit button {
+  padding: 15px;
+  margin-right: 15px;
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 128, 255, 0.7);
+  border: 1.5px solid rgba(0, 128, 255, 0.7);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form button a, .form-edit button a {
+  text-decoration: none;
+  color: rgba(0, 128, 255, 0.7)
+}
+
+.task-wrapper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.task-wrapper .date {
+  margin-bottom: 20px;
+  color: rgb(0, 128, 255);
+  background-color: rgb(255, 255, 255);
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.task {
+  background-color: rgba(0, 128, 255);
+  padding: 15px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.task p, .task .para-time {
+  color: #f0f0f0;
+}
+
+.task p {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+.task a {
+  text-decoration: none;
+  color: rgba(255,255,255, 0.6);
+}
+
+.task a:hover {
+  color: #f0f0f0;
+}
+
+.task-id {
+  color: rgba(0, 128, 255);
+  margin-top: 25px;
+  font-family: 'Roboto Slab', serif;
+  text-shadow: 2px 1.5px rgba(255,255,255, 0.6);
+}
+
+.through {
+  text-decoration: line-through;
+}
+
+
+@media screen and (max-width: 800px) {
+  .btn-task {
+    width: 100%;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  .task-wrapper {
+    width: 100%;
+  }
+  .task {
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .btn-task {
+    width: 100%;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  .task-wrapper {
+    width: 100%;
+  }
+  .task {
+    width: 100%;
+    display: block;
+  }
+  .task p  {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .task .para-time {
+    color: rgba(255,255,255, 0.6);
+  }
+  .task .para-time, .task a {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .form, .form-edit {
+    width: 100%;
+  }
+  .form form input, .form form input {
+    width: 100%;
+  }
+  .form form input[type=text], .form form input[type=text] {
+    margin-bottom: 10px;
+  }
+}

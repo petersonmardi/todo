@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+
+{% block head %} {{ super() }} {% endblock %}
+
+{% block title %} My TODO APP {% endblock %}
+
+{% block content %}
+  <header>
+    <nav>
+      <p>TODO</p>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+
+      <div class="btn-task">
+        <i class="fas plus fa-plus"></i> <span class='add-task' >Add Task</span>
+      </div>
+
+      <div class="container">
+
+        <div class="form">
+          <form action="{{ url_for('todo.add_task') }}" method="post">
+            <input type="text" name="task" placeholder=" Write your task">
+            <input class='submit' type="submit" value="Add">
+            <button class='submit'><a href="{{ url_for('todo.index') }}">Cancel</a></button>
+          </form>
+        </div>
+
+        {% for message in get_flashed_messages() %}
+        <div class="message">{{ message }}</div>
+        {% endfor %}
+
+        {% for task in tasks %}
+        <div class="task-wrapper">
+          <p class="date">{{ task.date_time_.strftime('%A, %B %d %Y') }}</p>
+          <div class="task">
+            <p>{{ task.text }}</p>
+            <p class="para-time">{{ task.date_time_.strftime('%H:%M') }}</p>
+            <a href="{{ url_for('todo.render_edit', id=task.id) }}">Edit</a>
+            <a href="{{ url_for('todo.delete', id=task.id) }}">Delete</a>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+
+    </section>
+  </main>
+{% endblock %}

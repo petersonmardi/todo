@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{% block head %} {{ super() }} {% endblock %}
+
+{% block title %} Edit task - {{ task.id }} {% endblock %}
+
+{% block content %}
+  <header>
+    <nav>
+      <p>TODO</p>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+
+      <div class="container">
+        <h1 class='task-id'>Edit Task {{ task.id }}</h1>
+        {% for message in get_flashed_messages() %}
+        <div class="message">{{ message }}</div>
+        {% endfor %}
+
+          {% if task %}
+          <div class="form-edit">
+            <form action="{{ url_for('todo.edit', id=task.id) }}" method="post">
+              <input type="text" name="edit" value="{{ task.text or request.form['edit'] }}">
+              <input type="submit" value="ADD">
+              <button class='submit'><a href="{{ url_for('todo.index') }}">Cancel</a></button>
+            </form>
+          </div>
+          {% endif %}
+      </div>
+
+    </section>
+  </main>
+{% endblock %}
