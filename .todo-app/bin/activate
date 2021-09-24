@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/peterson/Desktop/my_porfolio/todo-app/.todo-app"
+VIRTUAL_ENV="/home/naplaveyo167/MyWorkSpace/todo/.todo-app"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

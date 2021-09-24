@@ -29,7 +29,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/peterson/Desktop/my_porfolio/todo-app/.todo-app"
+set -gx VIRTUAL_ENV "/home/naplaveyo167/MyWorkSpace/todo/.todo-app"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
