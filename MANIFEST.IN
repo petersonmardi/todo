@@ -1,0 +1,3 @@
+graft todo-app/static
+graft todo-app/templates
+global-exclude *.pyc
