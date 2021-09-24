@@ -34,4 +34,3 @@ def create_app(config=None):
     app.register_blueprint(todo.bp)
 
     return app
-    return app
