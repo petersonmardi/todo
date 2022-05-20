@@ -4,7 +4,7 @@ from .credentials import *
 import os
 
 def create_app():
-    
+
     random_key = os.urandom(16)
 
     app = Flask(__name__)
@@ -12,7 +12,7 @@ def create_app():
     app.config.from_mapping(
         SECRET_KEY=random_key,
         #SQLALCHEMY_DATABASE_URI=r'sqlite:///C:\Users\pc\Documents\MyWorkSpace\todo\instance\database\1\my_app.db',
-        SQLALCHEMY_DATABASE_URI="postgresql://postgres:k4t4r.167@localhost:1167/postgres",
+        SQLALCHEMY_DATABASE_URI=f"postgresql://{username}:{password}@localhost:1167/{database}",
         SQLALCHEMY_TRACK_MODIFICATIONS=False,
     )
 
