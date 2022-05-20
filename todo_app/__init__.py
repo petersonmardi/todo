@@ -1,9 +1,10 @@
 from flask import Flask
 from .extensions import db, migrate
+from .credentials import *
 import os
 
 def create_app():
-    credentials = ("postgres", "k4t4r.167", "todo_db") #postgresql username, password, dbname
+    
     random_key = os.urandom(16)
 
     app = Flask(__name__)
