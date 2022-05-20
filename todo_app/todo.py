@@ -7,7 +7,8 @@ from flask import (
     request
     )
 
-from .models import Task, db
+from .models import Task
+from .extensions import db
 
 bp = Blueprint('todo', __name__)
 
