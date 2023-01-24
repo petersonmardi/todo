@@ -22,10 +22,10 @@
 
           {% if task %}
           <div class="form-edit">
-            <form action="{{ url_for('todo.edit', id=task.id) }}" method="post">
+            <form action="{{ url_for('edit.edit', id=task.id) }}" method="post">
               <input type="text" name="edit" value="{{ task.text or request.form['edit'] }}">
               <input type="submit" value="ADD">
-              <button class='submit'><a href="{{ url_for('todo.index') }}">Cancel</a></button>
+              <button class='submit'><a href="{{ url_for('index.main') }}">Cancel</a></button>
             </form>
           </div>
           {% endif %}

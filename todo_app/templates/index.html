@@ -15,16 +15,16 @@
     <section>
 
       <div class="btn-task">
-        <i class="fas plus fa-plus"></i> <span class='add-task' >Add Task</span>
+        <i class="fa-2x bi bi-plus-circle-fill"></i></span>
       </div>
 
       <div class="container">
 
         <div class="form">
-          <form action="{{ url_for('todo.add_task') }}" method="post">
+          <form action="{{ url_for('create.add') }}" method="post">
             <input type="text" name="task" placeholder=" Write your task">
             <input class='submit' type="submit" value="Add">
-            <button class='submit'><a href="{{ url_for('todo.index') }}">Cancel</a></button>
+            <button class='submit'><a href="{{ url_for('index.main') }}">Cancel</a></button>
           </form>
         </div>
 
@@ -38,14 +38,12 @@
           <div class="task">
             <p>{{ task.text }}</p>
             <p class="para-time">{{ task.date_time_.strftime('%H:%M') }}</p>
-            <a href="{{ url_for('todo.render_edit', id=task.id) }}">Edit</a>
-            <a href="{{ url_for('todo.delete', id=task.id) }}">Delete</a>
+            <a href="{{ url_for('edit.render_edit', id=task.id) }}">Edit</a>
+            <a href="{{ url_for('delete.delete', id=task.id) }}">Delete</a>
           </div>
         </div>
         {% endfor %}
-
       </div>
-
     </section>
   </main>
 {% endblock %}
